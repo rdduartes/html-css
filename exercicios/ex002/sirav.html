@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="/assets/img/favicon.png?v=3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>SIRAV - Login</title>
+
+    <link rel='stylesheet' type='text/css' href='https://optmode.sirav.pt/assets/css/open-iconic-bootstrap.min.css?v=101'>
+<link rel='stylesheet' type='text/css' href='https://optmode.sirav.pt/assets/css/main.css?v=101'>
+<link rel='stylesheet' type='text/css' href='https://optmode.sirav.pt/assets/css/OverlayScrollbars.min.css?v=101'>
+<link rel='stylesheet' type='text/css' href='https://optmode.sirav.pt/assets/css/bootstrap-toasty.min.css?v=101'>
+<link rel='stylesheet' type='text/css' href='https://optmode.sirav.pt/assets/css/chart.min.css?v=101'>
+
+
+
+
+</head>
+
+<body>
+    <nav class="navbar py-0 navbar-expand-lg navbar-dark bg-primary mb-0" id="loginNav">
+    <a class="navbar-brand pl-5" style="background-color:rgb(225, 1, 1);" href="#!"><img src="/assets/img/OPTMODE.png" style='height:38px;'><img class="ml-4 pr-3" src="/assets/img/nos-salesforce.png" style='height:38px;'></a>
+</nav>
+<input id="redirectionURL" type="hidden" class="d-none" value="/"/>
+
+<div id="loginWrapper" class="pt-4">
+<form id="loginForm">
+
+<div id="mobileImages">
+<img class="mx-auto d-block mb-3" src="/assets/img/OPTMODE.png" style='width:240px;'>
+<img class="mx-auto d-block mb-5" src="/assets/img/nos-salesforce.png" style='height:38px;'>
+</div>
+
+<h5 class="mb-0"><b>SIRAV</b></h5>
+<div class="text-muted mb-4">Sistema Integrado de Registo e Ativação de Vendas<b></b></div>
+<div id="errorAlert" class="alert alert-primary" role="alert">
+</div>
+<div class="row">
+    <div class="col-lg-1">
+        <label for="inputUtilizador">Utilizador(a)</label>
+    </div>
+    <div class="col-lg-3">
+        <input type="text" class="form-control" id="inputUtilizador" required/>
+    </div>
+    <div clas="col">
+        Please sign in to begin your secure session.
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-lg-1">
+        <label for="inputPassword">Password</label>
+    </div>
+    <div class="col-lg-3">
+        <input type="password" class="form-control" id="inputPassword" required/>
+    </div> 
+</div>
+<div class="row"><div id="loginButtonDiv" class="col-lg-4 mt-4"><button type="submit" class="btn btn-primary">Login</button></div></div>
+</form>
+
+<small id="politicaSeguranca" class="px-5 text-muted">Política de Segurança Optmode - utilização do Acesso Remoto. A Sirav é um instrumento de trabalho Optmode. O username e a password são pessoais e intransmissíveis. Os acessos à Sirav poderão ser monitorizados pela empresa por motivos de segurança. Não está autorizada a cópia, impressão, exportação e envio por qualquer meio de informação cujo acesso seja efetuado no âmbito do desempenho das funções, exceto para fins estritamente profissionais. É obrigatório efetuar logoff da sua sessão Sirav assim que termine o seu trabalho ou sempre que se ausente deste equipamento.</small>
+</div>
+    <div id="errorModel" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ocorreu um erro:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="error-modal-message"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="infoModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Informação:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="info-modal-message"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='https://optmode.sirav.pt/assets/js/polyfiller.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/jquery.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/popper.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/bootstrap.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/jscolor.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/datepicker.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/anime.min.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/jquery.overlayScrollbars.min.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/bs-custom-file-input.min.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/jquery.form.min.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/bootstrap-select.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/bootstrap-toasty.min.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/chart.min.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/chart-label.min.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/main.js?v=101'></script><script type='text/javascript' src='https://optmode.sirav.pt/assets/js/login/login.js?v=101'></script>
+    <!--<div class="footer">
+© 2019 por OPTMODE
+<br>
+OPTMODE todos os direitos reservados.
+</div>-->
+</body>
+
+</html>
